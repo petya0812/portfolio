@@ -1,0 +1,84 @@
+.Timer {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+
+  .container-timer {
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  .timer {
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .buttons {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  button {
+    color: white;
+    transition: all 0.5 ease;
+    cursor: pointer;
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #f9ba0c;
+    box-shadow: 0px 2px 0px 2px #daa20b;
+  }
+
+  button:hover {
+    background-color: #f8c845;
+    transform: translate(0, -2px);
+  }
+
+  button:active {
+    box-shadow: 0px 0px 2px 2px white;
+    transform: translate(0, 2px);
+  }
+
+  .input-timer {
+    border: none;
+    font-size: 20px;
+    border-radius: 7px;
+    padding: 10px;
+    outline: none;
+    background-color: #eee;
+  }
+
+  .input-timer:focus {
+    background-color: #fff;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  @media (max-width:500px) {
+    padding: 30px 5px;
+    .container-timer {
+      padding: 5px;
+    }
+  }
+
+}

@@ -1,0 +1,149 @@
+.TicTacToe {
+  /* Указываем box sizing */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  .TicTacToe {
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  /* Убираем внутренние отступы */
+  ul[class],
+  ol[class] {
+    padding: 0;
+  }
+
+  /* Убираем внешние отступы */
+  .TicTacToe,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  ul[class],
+  ol[class],
+  li,
+  figure,
+  figcaption,
+  blockquote,
+  dl,
+  dd {
+    margin: 0;
+  }
+
+  /* Выставляем основные настройки по-умолчанию для body */
+  .TicTacToe {
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+  }
+
+  /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+  ul[class],
+  ol[class] {
+    list-style: none;
+  }
+
+  /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+  a:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+
+  /* Упрощаем работу с изображениями */
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  /* Указываем понятную периодичность в потоке данных у article*/
+  article > * + * {
+    margin-top: 1em;
+  }
+
+  /* Наследуем шрифты для инпутов и кнопок */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+.TicTacToe {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .Board {
+    width: 308px;
+    height: 308px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .Cell {
+    width: 98px;
+    height: 98px;
+    border: 2px solid black;
+    margin: 2px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+  }
+
+  .btn {
+    margin-top: 10px;
+    width: fit-content;
+    white-space: nowrap;
+  }
+
+  .btn-success {
+    background-color: #f9ba0c;
+    border: 0;
+    color: white;
+  }
+
+  .btn-success:hover,
+  .btn-success:focus,
+  .btn-success:visited {
+    background-color: #bb8c09;
+    color: white;
+  }
+
+  .footer {
+    width: 308px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn-zone {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+  }
+
+  p {
+    width: 100%;
+  }
+}
